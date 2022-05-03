@@ -1,0 +1,12 @@
+<div id="<%= dom_id task %>">
+  <tr>
+    <% if task.completed %>
+      <td class="striker"><%= link_to task.description, edit_task_path(task) %></td>
+    <% else %>
+      <td><%= link_to task.description, edit_task_path(task) %></td>
+    <% end %>
+    <td>
+      <%= button_to 'Delete', task, method: :delete, class: "btn btn-danger" %> 
+    </td>
+  </tr>
+</div>
